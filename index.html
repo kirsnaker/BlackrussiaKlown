@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видео и Фото</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 10px;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 24px;
+        }
+        
+        .media-section {
+            margin-bottom: 30px;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 соотношение */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 15px;
+            background: #000;
+        }
+        
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .photo-item {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+        
+        .photo-item img:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                max-width: 90%;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .photo-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="media-section">
+            <h2>Видео</h2>
+            <div class="video-container">
+                <!-- Вставьте ваше видео (YouTube, Vimeo или прямое видео) -->
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                
+                <!-- Альтернативно, для загруженного видео: -->
+                <!--
+                <video controls>
+                    <source src="your-video.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео тег.
+                </video>
+                -->
+            </div>
+        </div>
+        
+        <div class="media-section">
+            <div class="photo-gallery">
+                <!-- Пример фото - замените на свои -->
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Описание фото 1">
+                </div>
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Описание фото 2">
+                </div>
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Описание фото 3">
+                </div>
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Описание фото 4">
+                </div>
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Описание фото 5">
+                </div>
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Описание фото 6">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
